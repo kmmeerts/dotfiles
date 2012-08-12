@@ -1,0 +1,9 @@
+[user]
+	name = Kasper Meerts
+	email = kaspermeerts@gmail.com
+[color]
+	ui = auto
+	interactive = auto
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
