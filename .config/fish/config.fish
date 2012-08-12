@@ -10,7 +10,12 @@ alias egrep="egrep --color"
 alias hd="hexdump -C"
 
 set BROWSER google-chrome
+
 set -e fish_greeting
+function fish_greeting -d "Greet the user"
+	test -z (git status --porcelain)
+	or echo "dotfiles git repository needs updating"
+end
 
 function fish_prompt -d "Write out the prompt"
 	and printf '%s%s%s> ' (set_color green) (prompt_pwd) (set_color normal)
