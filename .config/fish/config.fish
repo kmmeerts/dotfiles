@@ -13,7 +13,7 @@ set BROWSER google-chrome
 
 set -e fish_greeting
 function fish_greeting -d "Greet the user"
-	test -z (git status --porcelain)
+	test -z (git --git-dir=/home/kasper/.git --work-tree=/home/kasper/ status --porcelain)
 	or echo "dotfiles git repository needs updating"
 end
 
