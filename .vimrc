@@ -111,11 +111,13 @@ let mapleader = ","
 nnoremap <leader><space> :noh<cr>
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-h> <C-w>h        " For cycling through buffers
+" For cycling through buffers
+nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-noremap <Up> <Nop>           " I have to stop using these
+" I have to stop using these
+noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
