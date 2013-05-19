@@ -145,6 +145,7 @@ set number              " Line numbering
 set numberwidth=3       " Do not use an annoyingly wide number line column
 set ruler               " Show cursor position
 set scrolloff=7         " Always keep some context visible
+set shell=sh            " Problems when using Fish
 set shiftwidth=4
 set showcmd             " Display incomplete commands
 set showmatch
