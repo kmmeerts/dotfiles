@@ -127,6 +127,9 @@ map Q gq " Don't use Ex mode, use Q for formatting
 imap <silent> <F9> <ESC>:wa<RETURN>:make<RETURN>
 nmap <silent> <F9> :wa<RETURN>:make<RETURN>
 
+" If I forgot to use sudo
+cmap w!! w !sudo tee > /dev/null %
+
 set ai                  " Auto indenting
 set autochdir           " Might cause plugin problems
 set autoread            " Read the file when it's changed from the outside
