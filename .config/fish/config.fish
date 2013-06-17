@@ -4,7 +4,7 @@ bind \e\[4\~ end-of-line
 alias octave="octave -q"
 alias gdb="gdb -q"
 alias bc="bc -lq"
-alias gcc="gcc -Wall -Wextra"
+alias gcc="gcc -Wall -Wextra -std=c99"
 alias grep="grep --color"
 alias egrep="egrep --color"
 alias hd="hexdump -C"
