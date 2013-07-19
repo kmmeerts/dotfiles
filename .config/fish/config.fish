@@ -1,6 +1,3 @@
-bind \e\[1\~ beginning-of-line
-bind \e\[4\~ end-of-line
-
 alias octave="octave -q"
 alias gdb="gdb -q"
 alias bc="bc -lq"
@@ -32,4 +29,9 @@ end
 
 function lsp
 	ls $HOME/.local/share/wineprefixes
+end
+
+function fish_user_key_bindings
+	bind \e\[1\~ beginning-of-line
+	bind \e\[4\~ end-of-line
 end
