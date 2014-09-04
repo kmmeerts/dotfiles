@@ -168,7 +168,7 @@ autocmd BufReadPost *
   \ endif
 
 autocmd FileType fortran set tabstop=4|set shiftwidth=4|set expandtab
-autocmd FocusLost * :wa
+autocmd BufLeave,FocusLost * silent! wa
 au BufNewFile,BufRead *.tex	set ft=tex
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set ft=glsl
 
