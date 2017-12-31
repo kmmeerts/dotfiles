@@ -19,3 +19,25 @@ function fish_prompt -d "Write out the prompt"
 	or  set -l pwd_color red
 	printf '%s%s%s> ' (set_color $pwd_color) (prompt_pwd) (set_color normal)
 end
+
+function humanize_duration
+	set -l hours   (math "$argv           / 3600000")
+	set -l minutes (math "$argv % 3600000 /   60000")
+	set -l seconds (math "$argv %   60000 /    1000")
+	set -l millis  (math "$argv %    1000          ")
+	if test $hours -eq 0 -a $minutes -eq 0
+		printf                           {$seconds}"s %03d" $millis
+	else if test $hours -eq 0
+		printf             {$minutes}"m "{$seconds}"s %03d" $millis
+	else
+		printf {$hours}"h "{$minutes}"m "{$seconds}"s %03d" $millis
+	end
+end
+
+function fish_right_prompt
+	if not test $CMD_DURATION -a $CMD_DURATION -ge 500
+		return
+	end
+
+	set_color green; humanize_duration $CMD_DURATION; set_color normal;
+end
