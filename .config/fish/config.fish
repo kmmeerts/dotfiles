@@ -6,6 +6,7 @@ alias gcc="gcc -Wall -Wextra"
 alias hd="hexdump -C"
 alias yolo="yaourt -Syua"
 alias temp="cat /sys/class/thermal/thermal_zone*/temp"
+alias ffmpeg="ffmpeg -hide_banner"
 
 set -e fish_greeting
 function fish_greeting -d "Greet the user"
