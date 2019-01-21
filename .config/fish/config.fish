@@ -22,10 +22,10 @@ function fish_prompt -d "Write out the prompt"
 end
 
 function humanize_duration
-	set -l hours   (math "$argv           / 3600000")
-	set -l minutes (math "$argv % 3600000 /   60000")
-	set -l seconds (math "$argv %   60000 /    1000")
-	set -l millis  (math "$argv %    1000          ")
+	set -l hours   (math -s0 "$argv           / 3600000")
+	set -l minutes (math -s0 "$argv % 3600000 /   60000")
+	set -l seconds (math -s0 "$argv %   60000 /    1000")
+	set -l millis  (math -s0 "$argv %    1000          ")
 	if test $hours -eq 0 -a $minutes -eq 0
 		printf                           {$seconds}"s %03d" $millis
 	else if test $hours -eq 0
