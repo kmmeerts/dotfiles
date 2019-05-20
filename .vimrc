@@ -5,6 +5,7 @@ filetype plugin on
 let mapleader = ","
 nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>l :set list!<cr>
+nnoremap <leader>n :set relativenumber!<cr>
 
 nnoremap j gj
 nnoremap k gk
